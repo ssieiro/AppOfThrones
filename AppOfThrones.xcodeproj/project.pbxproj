@@ -32,6 +32,16 @@
 		F7A962A423FDD34200F52656 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A323FDD34200F52656 /* Houses.swift */; };
 		F7A962A623FDD76600F52656 /* HousesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A523FDD76600F52656 /* HousesTableViewCell.swift */; };
 		F7A962A823FDD76F00F52656 /* HousesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A962A723FDD76F00F52656 /* HousesTableViewCell.xib */; };
+		F7B26B32240306450058806B /* cast.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B28240306440058806B /* cast.json */; };
+		F7B26B33240306450058806B /* season_4.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B29240306440058806B /* season_4.json */; };
+		F7B26B34240306450058806B /* season_5.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2A240306440058806B /* season_5.json */; };
+		F7B26B35240306450058806B /* season_6.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2B240306440058806B /* season_6.json */; };
+		F7B26B36240306450058806B /* season_1.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2C240306440058806B /* season_1.json */; };
+		F7B26B37240306450058806B /* season_3.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2D240306440058806B /* season_3.json */; };
+		F7B26B38240306450058806B /* season_7.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2E240306440058806B /* season_7.json */; };
+		F7B26B39240306450058806B /* season_8.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B2F240306440058806B /* season_8.json */; };
+		F7B26B3A240306450058806B /* season_2.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B30240306440058806B /* season_2.json */; };
+		F7B26B3B240306450058806B /* houses.json in Resources */ = {isa = PBXBuildFile; fileRef = F7B26B31240306450058806B /* houses.json */; };
 		F7F0FC17240019300053DF77 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F0FC16240019300053DF77 /* RateViewController.xib */; };
 		F7F0FC19240029910053DF77 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0FC18240029910053DF77 /* Rating.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +86,16 @@
 		F7A962A323FDD34200F52656 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
 		F7A962A523FDD76600F52656 /* HousesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesTableViewCell.swift; sourceTree = "<group>"; };
 		F7A962A723FDD76F00F52656 /* HousesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HousesTableViewCell.xib; sourceTree = "<group>"; };
+		F7B26B28240306440058806B /* cast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cast.json; path = AppOfThrones/Jsons/cast.json; sourceTree = "<group>"; };
+		F7B26B29240306440058806B /* season_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_4.json; path = AppOfThrones/Jsons/season_4.json; sourceTree = "<group>"; };
+		F7B26B2A240306440058806B /* season_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_5.json; path = AppOfThrones/Jsons/season_5.json; sourceTree = "<group>"; };
+		F7B26B2B240306440058806B /* season_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_6.json; path = AppOfThrones/Jsons/season_6.json; sourceTree = "<group>"; };
+		F7B26B2C240306440058806B /* season_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_1.json; path = AppOfThrones/Jsons/season_1.json; sourceTree = "<group>"; };
+		F7B26B2D240306440058806B /* season_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_3.json; path = AppOfThrones/Jsons/season_3.json; sourceTree = "<group>"; };
+		F7B26B2E240306440058806B /* season_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_7.json; path = AppOfThrones/Jsons/season_7.json; sourceTree = "<group>"; };
+		F7B26B2F240306440058806B /* season_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_8.json; path = AppOfThrones/Jsons/season_8.json; sourceTree = "<group>"; };
+		F7B26B30240306440058806B /* season_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = season_2.json; path = AppOfThrones/Jsons/season_2.json; sourceTree = "<group>"; };
+		F7B26B31240306450058806B /* houses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = houses.json; path = AppOfThrones/Jsons/houses.json; sourceTree = "<group>"; };
 		F7F0FC16240019300053DF77 /* RateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
 		F7F0FC18240029910053DF77 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +125,16 @@
 				C38311D823F08A8100ADDB83 /* AppOfThrones */,
 				C38311EF23F08A8400ADDB83 /* AppOfThronesTests */,
 				C38311D723F08A8100ADDB83 /* Products */,
+				F7B26B28240306440058806B /* cast.json */,
+				F7B26B31240306450058806B /* houses.json */,
+				F7B26B2C240306440058806B /* season_1.json */,
+				F7B26B30240306440058806B /* season_2.json */,
+				F7B26B2D240306440058806B /* season_3.json */,
+				F7B26B29240306440058806B /* season_4.json */,
+				F7B26B2A240306440058806B /* season_5.json */,
+				F7B26B2B240306440058806B /* season_6.json */,
+				F7B26B2E240306440058806B /* season_7.json */,
+				F7B26B2F240306440058806B /* season_8.json */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,15 +311,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A962A023FDCC0400F52656 /* Images in Resources */,
+				F7B26B35240306450058806B /* season_6.json in Resources */,
 				C38311E623F08A8400ADDB83 /* LaunchScreen.storyboard in Resources */,
 				C383120B23F0ABAC00ADDB83 /* CastViewController.xib in Resources */,
+				F7B26B38240306450058806B /* season_7.json in Resources */,
+				F7B26B3B240306450058806B /* houses.json in Resources */,
 				F7F0FC17240019300053DF77 /* RateViewController.xib in Resources */,
+				F7B26B34240306450058806B /* season_5.json in Resources */,
+				F7B26B32240306450058806B /* cast.json in Resources */,
 				F719941E23FDDA3F008667A8 /* HousesViewController.xib in Resources */,
+				F7B26B33240306450058806B /* season_4.json in Resources */,
 				C383120323F0A76B00ADDB83 /* EpisodeViewController.xib in Resources */,
+				F7B26B3A240306450058806B /* season_2.json in Resources */,
 				C38311E323F08A8400ADDB83 /* Assets.xcassets in Resources */,
 				F736D57223FC8C3B003FCAA3 /* CastTableViewCell.xib in Resources */,
+				F7B26B39240306450058806B /* season_8.json in Resources */,
 				F776E97B23FC71B100D22DBB /* EpisodeTableViewCell.xib in Resources */,
 				C383121523F0AC4900ADDB83 /* SettingsViewController.xib in Resources */,
+				F7B26B36240306450058806B /* season_1.json in Resources */,
+				F7B26B37240306450058806B /* season_3.json in Resources */,
 				F7A962A823FDD76F00F52656 /* HousesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

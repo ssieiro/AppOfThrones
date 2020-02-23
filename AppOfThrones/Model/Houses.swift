@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Houses {
+struct Houses: Codable {
     var imageName: String? // emblema
     var name: String? // nombre de la casa
     var words: String? // lema

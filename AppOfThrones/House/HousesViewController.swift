@@ -12,13 +12,14 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBOutlet weak var tableView: UITableView!
-    let houses: [Houses] = [Houses.init(imageName: "Stark", name: "Stark", words: " 'Winter is Coming.' ", seat: "Winterfell"), Houses.init(imageName: "Targaryen", name: "Targaryen", words: " 'Fire and Blood' ", seat: "Great Pyramid of Meereen, Aegonfort, Red Keep, Dragonstone, Summerhall"), Houses.init(imageName: "Tyrell", name: "Tyrell", words: " 'Growing Strong' ", seat: "Highgarden"), Houses.init(imageName: "Baratheon", name: "Baratheon", words: " 'Ours is the Fury' ", seat: "Storm's End, King's Landing, Dragonstone"), Houses.init(imageName: "Lannister", name: "Lannister", words: " 'Hear Me Roar!' ", seat: "Casterly Rock")]
+    var houses: [Houses] = []
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupData() // carga los datos
     }
 
     // MARK: - Setup
@@ -30,6 +31,22 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func setupData() {
+        if let pathURL = Bundle.main.url(forResource: "houses", withExtension: "json"){
+            do {
+            let data = try Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder()
+            houses = try decoder.decode([Houses].self, from: data)
+            self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("Could not build the path url")
+        }
+        
     }
     
     // MARK: UITableViewDelegate

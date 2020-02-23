@@ -12,13 +12,14 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var cast: [Cast] = [Cast.init(id: 1, avatar: "Emilia Clarke", fullname: "Emilia Clarke", role: "Daenerys Targarien", episodes: 76, birth: "1986-10-23", placeBirth: "London, England, UK"), Cast.init(id: 2, avatar: "Kit Harington", fullname: "Kit Harington", role: "Jon Snow", episodes: 76, birth: "1986-12-20", placeBirth: "London, England, UK")]
+    var cast: [Cast] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
         self.setupNotifications()
+        self.setupData()
     }
     
     //: MARK: Setup
@@ -35,6 +36,23 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setupNotifications() {
         let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+        
+    }
+    
+    func setupData() {
+        if let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json"){
+            do {
+            let data = try Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder()
+            cast = try decoder.decode([Cast].self, from: data)
+            self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("Could not build the path url")
+        }
+        
     }
         // MARK: FavoriteDelegate
         

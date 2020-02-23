@@ -18,12 +18,14 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     
-    var episodes: [Episode] = [Episode.init(id: 11, name: "Winter Is Coming", date: "April 17, 2011", image: "episodeTest", episode: 1, season: 1, overview: "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army.")]
+    var episodes: [Episode] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
         self.setupNotifications ()
+        self.setupData(1)
+        
     }
 /* ciclo de vida
     override func viewDidAppear(_ animated: Bool) {
@@ -46,10 +48,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("viewDidDisappear")
     }
 */
+    // MARK: Setup
     
     func setupUI() {
         self.title = "Seasons"
-        
         //crear referencia al xib de la celda para la tabla, nib = xib
         
         let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
@@ -64,6 +66,24 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
     }
     
+    func setupData(_ seasonNumber: Int) {
+        if let pathURL = Bundle.main.url(forResource: "season_\(seasonNumber)", withExtension: "json"){
+            do {
+            let data = try Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder()
+            episodes = try decoder.decode([Episode].self, from: data)
+            self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("Could not build the path url")
+        }
+        
+    }
+    
+    // MARK: IBActions
+    
     @IBAction func openRate(_ sender: Any) {
         //código para abrir pantalla rate
         let rateViewController = RateViewController()
@@ -71,7 +91,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.present(rateViewController, animated: true, completion: nil)
     }
     
-
+    @IBAction func seasonChanged(_ sender: UISegmentedControl) {
+        let seasonNumber = sender.selectedSegmentIndex + 1
+        self.setupData(seasonNumber)
+    }
+    
     // MARK: EpisodeTableViewCellDelegate
     
     func didRateChanged() {

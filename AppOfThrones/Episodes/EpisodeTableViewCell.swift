@@ -32,7 +32,7 @@ class EpisodeTableViewCell: UITableViewCell {
         thumb.layer.cornerRadius = 2.0
         thumb.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
         thumb.layer.borderWidth = 1.0
-        rateButton.layer.cornerRadius = 4
+        rateButton.layer.cornerRadius = 10
     }
     //MARK: IBActions
     
