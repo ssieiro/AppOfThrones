@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C38311DA23F08A8100ADDB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38311D923F08A8100ADDB83 /* AppDelegate.swift */; };
+		C38311DC23F08A8100ADDB83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38311DB23F08A8100ADDB83 /* SceneDelegate.swift */; };
+		C38311E323F08A8400ADDB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38311E223F08A8400ADDB83 /* Assets.xcassets */; };
+		C38311E623F08A8400ADDB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38311E423F08A8400ADDB83 /* LaunchScreen.storyboard */; };
+		C38311F123F08A8400ADDB83 /* AppOfThronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38311F023F08A8400ADDB83 /* AppOfThronesTests.swift */; };
+		C38311FD23F0A0CE00ADDB83 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38311FC23F0A0CE00ADDB83 /* RateViewController.swift */; };
+		C383120123F0A75400ADDB83 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383120023F0A75400ADDB83 /* EpisodeViewController.swift */; };
+		C383120323F0A76B00ADDB83 /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C383120223F0A76B00ADDB83 /* EpisodeViewController.xib */; };
+		C383120623F0AA8800ADDB83 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383120523F0AA8800ADDB83 /* Episode.swift */; };
+		C383120923F0ABA200ADDB83 /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383120823F0ABA200ADDB83 /* CastViewController.swift */; };
+		C383120B23F0ABAC00ADDB83 /* CastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C383120A23F0ABAC00ADDB83 /* CastViewController.xib */; };
+		C383120E23F0ABF400ADDB83 /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383120D23F0ABF400ADDB83 /* HousesViewController.swift */; };
+		C383121323F0AC4200ADDB83 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C383121223F0AC4200ADDB83 /* SettingsViewController.swift */; };
+		C383121523F0AC4900ADDB83 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C383121423F0AC4900ADDB83 /* SettingsViewController.xib */; };
+		F719941E23FDDA3F008667A8 /* HousesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F719941D23FDDA3F008667A8 /* HousesViewController.xib */; };
+		F736D57023FC8C2D003FCAA3 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736D56F23FC8C2D003FCAA3 /* CastTableViewCell.swift */; };
+		F736D57223FC8C3B003FCAA3 /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F736D57123FC8C3B003FCAA3 /* CastTableViewCell.xib */; };
+		F736D57423FC8F7C003FCAA3 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736D57323FC8F7C003FCAA3 /* Cast.swift */; };
+		F776E97923FC716D00D22DBB /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F776E97823FC716D00D22DBB /* EpisodeTableViewCell.swift */; };
+		F776E97B23FC71B100D22DBB /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F776E97A23FC71B100D22DBB /* EpisodeTableViewCell.xib */; };
+		F7A962A023FDCC0400F52656 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = F7A9629F23FDCC0400F52656 /* Images */; };
+		F7A962A223FDCFF000F52656 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A123FDCFF000F52656 /* DataController.swift */; };
+		F7A962A423FDD34200F52656 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A323FDD34200F52656 /* Houses.swift */; };
+		F7A962A623FDD76600F52656 /* HousesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A523FDD76600F52656 /* HousesTableViewCell.swift */; };
+		F7A962A823FDD76F00F52656 /* HousesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7A962A723FDD76F00F52656 /* HousesTableViewCell.xib */; };
+		F7F0FC17240019300053DF77 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F0FC16240019300053DF77 /* RateViewController.xib */; };
+		F7F0FC19240029910053DF77 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F0FC18240029910053DF77 /* Rating.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C38311ED23F08A8400ADDB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C38311CE23F08A8100ADDB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C38311D523F08A8100ADDB83;
+			remoteInfo = AppOfThrones;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C38311D623F08A8100ADDB83 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38311D923F08A8100ADDB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C38311DB23F08A8100ADDB83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C38311E223F08A8400ADDB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C38311E523F08A8400ADDB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C38311E723F08A8400ADDB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C38311EC23F08A8400ADDB83 /* AppOfThronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppOfThronesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38311F023F08A8400ADDB83 /* AppOfThronesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOfThronesTests.swift; sourceTree = "<group>"; };
+		C38311F223F08A8400ADDB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C38311FC23F0A0CE00ADDB83 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		C383120023F0A75400ADDB83 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		C383120223F0A76B00ADDB83 /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
+		C383120523F0AA8800ADDB83 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		C383120823F0ABA200ADDB83 /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
+		C383120A23F0ABAC00ADDB83 /* CastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastViewController.xib; sourceTree = "<group>"; };
+		C383120D23F0ABF400ADDB83 /* HousesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
+		C383121223F0AC4200ADDB83 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C383121423F0AC4900ADDB83 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		F719941D23FDDA3F008667A8 /* HousesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HousesViewController.xib; sourceTree = "<group>"; };
+		F736D56F23FC8C2D003FCAA3 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
+		F736D57123FC8C3B003FCAA3 /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
+		F736D57323FC8F7C003FCAA3 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		F776E97823FC716D00D22DBB /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		F776E97A23FC71B100D22DBB /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		F7A9629F23FDCC0400F52656 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = AppOfThrones/Images; sourceTree = "<group>"; };
+		F7A962A123FDCFF000F52656 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		F7A962A323FDD34200F52656 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
+		F7A962A523FDD76600F52656 /* HousesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesTableViewCell.swift; sourceTree = "<group>"; };
+		F7A962A723FDD76F00F52656 /* HousesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HousesTableViewCell.xib; sourceTree = "<group>"; };
+		F7F0FC16240019300053DF77 /* RateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		F7F0FC18240029910053DF77 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C38311D323F08A8100ADDB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38311E923F08A8400ADDB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C38311CD23F08A8100ADDB83 = {
+			isa = PBXGroup;
+			children = (
+				F7A9629F23FDCC0400F52656 /* Images */,
+				C38311D823F08A8100ADDB83 /* AppOfThrones */,
+				C38311EF23F08A8400ADDB83 /* AppOfThronesTests */,
+				C38311D723F08A8100ADDB83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C38311D723F08A8100ADDB83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C38311D623F08A8100ADDB83 /* AppOfThrones.app */,
+				C38311EC23F08A8400ADDB83 /* AppOfThronesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C38311D823F08A8100ADDB83 /* AppOfThrones */ = {
+			isa = PBXGroup;
+			children = (
+				C38311D923F08A8100ADDB83 /* AppDelegate.swift */,
+				C38311DB23F08A8100ADDB83 /* SceneDelegate.swift */,
+				F7A962A123FDCFF000F52656 /* DataController.swift */,
+				C38311FB23F0A0BA00ADDB83 /* Episodes */,
+				C383120723F0AB9300ADDB83 /* Cast */,
+				C383120C23F0ABDB00ADDB83 /* House */,
+				C383121123F0AC3300ADDB83 /* Settings */,
+				C383120423F0AA7000ADDB83 /* Model */,
+				C38311E223F08A8400ADDB83 /* Assets.xcassets */,
+				C38311E423F08A8400ADDB83 /* LaunchScreen.storyboard */,
+				C38311E723F08A8400ADDB83 /* Info.plist */,
+			);
+			path = AppOfThrones;
+			sourceTree = "<group>";
+		};
+		C38311EF23F08A8400ADDB83 /* AppOfThronesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C38311F023F08A8400ADDB83 /* AppOfThronesTests.swift */,
+				C38311F223F08A8400ADDB83 /* Info.plist */,
+			);
+			path = AppOfThronesTests;
+			sourceTree = "<group>";
+		};
+		C38311FB23F0A0BA00ADDB83 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				C383120023F0A75400ADDB83 /* EpisodeViewController.swift */,
+				C383120223F0A76B00ADDB83 /* EpisodeViewController.xib */,
+				F776E97823FC716D00D22DBB /* EpisodeTableViewCell.swift */,
+				F776E97A23FC71B100D22DBB /* EpisodeTableViewCell.xib */,
+				C38311FC23F0A0CE00ADDB83 /* RateViewController.swift */,
+				F7F0FC16240019300053DF77 /* RateViewController.xib */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		C383120423F0AA7000ADDB83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C383120523F0AA8800ADDB83 /* Episode.swift */,
+				F736D57323FC8F7C003FCAA3 /* Cast.swift */,
+				F7A962A323FDD34200F52656 /* Houses.swift */,
+				F7F0FC18240029910053DF77 /* Rating.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C383120723F0AB9300ADDB83 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				C383120823F0ABA200ADDB83 /* CastViewController.swift */,
+				C383120A23F0ABAC00ADDB83 /* CastViewController.xib */,
+				F736D56F23FC8C2D003FCAA3 /* CastTableViewCell.swift */,
+				F736D57123FC8C3B003FCAA3 /* CastTableViewCell.xib */,
+			);
+			path = Cast;
+			sourceTree = "<group>";
+		};
+		C383120C23F0ABDB00ADDB83 /* House */ = {
+			isa = PBXGroup;
+			children = (
+				C383120D23F0ABF400ADDB83 /* HousesViewController.swift */,
+				F719941D23FDDA3F008667A8 /* HousesViewController.xib */,
+				F7A962A523FDD76600F52656 /* HousesTableViewCell.swift */,
+				F7A962A723FDD76F00F52656 /* HousesTableViewCell.xib */,
+			);
+			path = House;
+			sourceTree = "<group>";
+		};
+		C383121123F0AC3300ADDB83 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C383121223F0AC4200ADDB83 /* SettingsViewController.swift */,
+				C383121423F0AC4900ADDB83 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C38311D523F08A8100ADDB83 /* AppOfThrones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C38311F523F08A8400ADDB83 /* Build configuration list for PBXNativeTarget "AppOfThrones" */;
+			buildPhases = (
+				C38311D223F08A8100ADDB83 /* Sources */,
+				C38311D323F08A8100ADDB83 /* Frameworks */,
+				C38311D423F08A8100ADDB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppOfThrones;
+			productName = AppOfThrones;
+			productReference = C38311D623F08A8100ADDB83 /* AppOfThrones.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C38311EB23F08A8400ADDB83 /* AppOfThronesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C38311F823F08A8400ADDB83 /* Build configuration list for PBXNativeTarget "AppOfThronesTests" */;
+			buildPhases = (
+				C38311E823F08A8400ADDB83 /* Sources */,
+				C38311E923F08A8400ADDB83 /* Frameworks */,
+				C38311EA23F08A8400ADDB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C38311EE23F08A8400ADDB83 /* PBXTargetDependency */,
+			);
+			name = AppOfThronesTests;
+			productName = AppOfThronesTests;
+			productReference = C38311EC23F08A8400ADDB83 /* AppOfThronesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C38311CE23F08A8100ADDB83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Fernando Torcelly Garcia";
+				TargetAttributes = {
+					C38311D523F08A8100ADDB83 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					C38311EB23F08A8400ADDB83 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = C38311D523F08A8100ADDB83;
+					};
+				};
+			};
+			buildConfigurationList = C38311D123F08A8100ADDB83 /* Build configuration list for PBXProject "AppOfThrones" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C38311CD23F08A8100ADDB83;
+			productRefGroup = C38311D723F08A8100ADDB83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C38311D523F08A8100ADDB83 /* AppOfThrones */,
+				C38311EB23F08A8400ADDB83 /* AppOfThronesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C38311D423F08A8100ADDB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7A962A023FDCC0400F52656 /* Images in Resources */,
+				C38311E623F08A8400ADDB83 /* LaunchScreen.storyboard in Resources */,
+				C383120B23F0ABAC00ADDB83 /* CastViewController.xib in Resources */,
+				F7F0FC17240019300053DF77 /* RateViewController.xib in Resources */,
+				F719941E23FDDA3F008667A8 /* HousesViewController.xib in Resources */,
+				C383120323F0A76B00ADDB83 /* EpisodeViewController.xib in Resources */,
+				C38311E323F08A8400ADDB83 /* Assets.xcassets in Resources */,
+				F736D57223FC8C3B003FCAA3 /* CastTableViewCell.xib in Resources */,
+				F776E97B23FC71B100D22DBB /* EpisodeTableViewCell.xib in Resources */,
+				C383121523F0AC4900ADDB83 /* SettingsViewController.xib in Resources */,
+				F7A962A823FDD76F00F52656 /* HousesTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38311EA23F08A8400ADDB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C38311D223F08A8100ADDB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C38311DA23F08A8100ADDB83 /* AppDelegate.swift in Sources */,
+				F7A962A223FDCFF000F52656 /* DataController.swift in Sources */,
+				F7A962A623FDD76600F52656 /* HousesTableViewCell.swift in Sources */,
+				F7A962A423FDD34200F52656 /* Houses.swift in Sources */,
+				F776E97923FC716D00D22DBB /* EpisodeTableViewCell.swift in Sources */,
+				C38311FD23F0A0CE00ADDB83 /* RateViewController.swift in Sources */,
+				C383120123F0A75400ADDB83 /* EpisodeViewController.swift in Sources */,
+				F736D57023FC8C2D003FCAA3 /* CastTableViewCell.swift in Sources */,
+				C383120E23F0ABF400ADDB83 /* HousesViewController.swift in Sources */,
+				C383120623F0AA8800ADDB83 /* Episode.swift in Sources */,
+				C38311DC23F08A8100ADDB83 /* SceneDelegate.swift in Sources */,
+				F736D57423FC8F7C003FCAA3 /* Cast.swift in Sources */,
+				F7F0FC19240029910053DF77 /* Rating.swift in Sources */,
+				C383120923F0ABA200ADDB83 /* CastViewController.swift in Sources */,
+				C383121323F0AC4200ADDB83 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38311E823F08A8400ADDB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C38311F123F08A8400ADDB83 /* AppOfThronesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C38311EE23F08A8400ADDB83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C38311D523F08A8100ADDB83 /* AppOfThrones */;
+			targetProxy = C38311ED23F08A8400ADDB83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C38311E423F08A8400ADDB83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C38311E523F08A8400ADDB83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C38311F323F08A8400ADDB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C38311F423F08A8400ADDB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C38311F623F08A8400ADDB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VM7B3AWTR8;
+				INFOPLIST_FILE = AppOfThrones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.torcelly.AppOfThrones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C38311F723F08A8400ADDB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VM7B3AWTR8;
+				INFOPLIST_FILE = AppOfThrones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.torcelly.AppOfThrones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C38311F923F08A8400ADDB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VM7B3AWTR8;
+				INFOPLIST_FILE = AppOfThronesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.torcelly.AppOfThronesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppOfThrones.app/AppOfThrones";
+			};
+			name = Debug;
+		};
+		C38311FA23F08A8400ADDB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VM7B3AWTR8;
+				INFOPLIST_FILE = AppOfThronesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.torcelly.AppOfThronesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppOfThrones.app/AppOfThrones";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C38311D123F08A8100ADDB83 /* Build configuration list for PBXProject "AppOfThrones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C38311F323F08A8400ADDB83 /* Debug */,
+				C38311F423F08A8400ADDB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C38311F523F08A8400ADDB83 /* Build configuration list for PBXNativeTarget "AppOfThrones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C38311F623F08A8400ADDB83 /* Debug */,
+				C38311F723F08A8400ADDB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C38311F823F08A8400ADDB83 /* Build configuration list for PBXNativeTarget "AppOfThronesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C38311F923F08A8400ADDB83 /* Debug */,
+				C38311FA23F08A8400ADDB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C38311CE23F08A8100ADDB83 /* Project object */;
+}
