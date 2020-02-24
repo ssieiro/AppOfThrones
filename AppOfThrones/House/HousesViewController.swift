@@ -8,7 +8,9 @@
 
 import UIKit
 
-class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FavoriteDelegate {
+
+
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +21,7 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupNotifications()
         self.setupData() // carga los datos
     }
 
@@ -31,6 +34,12 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func setupNotifications() {
+        let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+        
     }
     
     func setupData() {
@@ -49,6 +58,11 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    // MARK: Favorite Delegate
+    
+    @objc func didFavoriteChanged() {
+        self.tableView.reloadData()
+    }
     // MARK: UITableViewDelegate
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,6 +88,7 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HousesTableViewCell", for: indexPath) as? HousesTableViewCell {
                 let house = houses[indexPath.row]
+                cell.delegate = self
                 cell.setHouses(house)
                 return cell
             }
