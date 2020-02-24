@@ -10,7 +10,7 @@ import UIKit
 
 //delegate y data source son protocolos para poder controlar la tabla
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateTableViewControllerDelegate, FavoriteDelegate {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateTableViewControllerDelegate, FavoriteDelegate{
 
     
     @IBOutlet weak var seasonSegmented: UISegmentedControl!

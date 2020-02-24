@@ -8,10 +8,27 @@
 
 import Foundation
 
-struct Houses: Identifiable, Codable {
+struct Houses: Identifiable, Codable, CustomStringConvertible, Equatable {
+ 
+    static func == (lhs: Houses, rhs: Houses) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+    var description: String
+    
     var id: Int
     var imageName: String? // emblema
     var name: String? // nombre de la casa
     var words: String? // lema
     var seat: String? // areas por las que se mueven las casas, mirar en la wiki
+    
+    init(id: Int, imageName: String?, name: String?, words: String?, seat: String?) {
+        self.id = id
+        self.imageName = imageName
+        self.name = name
+        self.words = words
+        self.seat = seat
+        self.description = "Esta es la casa \(name ?? "con el id\(id)")"
+    }
 }
