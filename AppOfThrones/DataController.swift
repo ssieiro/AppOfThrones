@@ -14,6 +14,10 @@ protocol FavoriteDelegate {
     func didFavoriteChanged()
 }
 
+protocol RateTableViewControllerDelegate {
+    func didRateChanged()
+} // protocolo para tener un delegado, cuando doy un aviso llama a episodeviewcontroller para que refresque la vista
+
 protocol Identifiable {
     var id: Int { get }
 }
@@ -57,9 +61,13 @@ class DataController {
 
     // MARK: Rating
     
+    func cleanRating() {
+        rating = []
+    }
+    
     func rateEpisode(_ episode: Episode, value: Double) {
         if self.ratingForEpisode(episode) == nil {
-            let rateValue = Rating.init(id: episode.id, rate: Rate.rated(value: value))
+            let rateValue = Rating.init(id: episode.id, rate: Rate.rated(value: value), description: "Esta es la valoración con id \(episode.id)")
             rating.append(rateValue)
         }
     }

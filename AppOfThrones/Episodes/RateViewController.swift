@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol RateTableViewControllerDelegate {
-    func didRateChanged()
-} // protocolo para tener un delegado, cuando doy un aviso llama a episodeviewcontroller para que refresque la vista
+
 
 class RateViewController: UIViewController {
     

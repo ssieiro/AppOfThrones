@@ -21,9 +21,11 @@ struct Cast: Identifiable, Codable, CustomStringConvertible, Equatable {
     var episodes: Int?
     var birth: String?
     var placeBirth: String?
-    var description: String
+    var description: String {
+        return "Este actor tiene el id \(self.id)"
+    }
     
-    init(id: Int, avatar: String?, fullname: String?, role: String?, episodes: Int?, birth: String?, placeBirth: String?, description: String) {
+    init(id: Int, avatar: String?, fullname: String?, role: String?, episodes: Int?, birth: String?, placeBirth: String?) {
         self.id = id
         self.avatar = avatar
         self.fullname = fullname
@@ -31,6 +33,5 @@ struct Cast: Identifiable, Codable, CustomStringConvertible, Equatable {
         self.episodes = episodes
         self.birth = birth
         self.placeBirth = placeBirth
-        self.description = "Este actor tiene el id \(id)"
     }
 }

@@ -15,9 +15,6 @@ class Episode: Identifiable, Codable, CustomStringConvertible, Equatable {
     }
     
     
-    var description: String
-    
-    
     var id: Int
     var name: String?
     var date: String?
@@ -25,6 +22,9 @@ class Episode: Identifiable, Codable, CustomStringConvertible, Equatable {
     var episode: Int
     var season: Int
     var overview: String
+    var description: String {
+        return "Este episodio es el número \(self.episode) de la temporada \(self.season)"
+    }
     
     init(id: Int, name: String?, date: String?, image: String?, episode: Int, season: Int, overview: String) {
         self.id = id
@@ -34,6 +34,6 @@ class Episode: Identifiable, Codable, CustomStringConvertible, Equatable {
         self.episode = episode
         self.season = season
         self.overview = overview
-        self.description = "Este episodio es el número \(self.episode) de la temporada \(self.season)"
+        
     }
 }

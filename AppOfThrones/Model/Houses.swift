@@ -15,7 +15,9 @@ struct Houses: Identifiable, Codable, CustomStringConvertible, Equatable {
     }
     
     
-    var description: String
+    var description: String {
+        return "Esta es la casa \(self.name ?? "con el id\(self.id)")"
+    }
     
     var id: Int
     var imageName: String? // emblema
@@ -29,6 +31,5 @@ struct Houses: Identifiable, Codable, CustomStringConvertible, Equatable {
         self.name = name
         self.words = words
         self.seat = seat
-        self.description = "Esta es la casa \(name ?? "con el id\(id)")"
     }
 }

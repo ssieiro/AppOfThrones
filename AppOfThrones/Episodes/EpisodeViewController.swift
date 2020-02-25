@@ -16,7 +16,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var seasonSegmented: UISegmentedControl!
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     
     var episodes: [Episode] = []
     
@@ -64,6 +64,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func setupNotifications () {
         let noteName = Notification.Name(rawValue: "DidFavoritesUpdated")
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: noteName, object: nil)
+        let noteName2 = Notification.Name(rawValue: "DidRatesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRateChanged), name: noteName2, object: nil)
+        
+        
     }
     
     func setupData(_ seasonNumber: Int) {
@@ -98,9 +102,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // MARK: EpisodeTableViewCellDelegate
     
-    func didRateChanged() {
-        self.tableView.reloadData() // si hay un cambio en setRating llama aqui y lo recarga, que es el que se encarga de recargar, n o podemos hacerlo en el rateviewcontroller
+    @objc func didRateChanged() {
+        self.tableView.reloadData() // si hay un cambio en setRating llama aqui y lo recarga, que es el que se encarga de recargar, no podemos hacerlo en el rateviewcontroller
     }
+    
+    // MARK: RateTableViewControllerDelegate
     
 //    Sale el objc porque las tripas del notification center estan en objective-c
     @objc func didFavoriteChanged() {
