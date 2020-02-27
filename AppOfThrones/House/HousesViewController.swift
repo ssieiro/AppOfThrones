@@ -70,7 +70,9 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            print("Se ha hecho tap en la celda con sección \(indexPath.section) y la fila \(indexPath.row)")
+            let name = houses[indexPath.row].name ?? ""
+            let housesDetailVC = HousesDetailViewController.init(title: name)
+            self.navigationController?.pushViewController(housesDetailVC, animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
             
         }

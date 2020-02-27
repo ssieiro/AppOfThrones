@@ -120,11 +120,14 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        false //evita que podamos seleccionar una celda
+        true //evita o permite que podamos seleccionar una celda
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //código que se ejecuta si se selecciona la celda
+        let name = episodes[indexPath.row].name ?? ""
+        let episodeDetailVC = EpisodeDetailViewController.init(title: name)
+        self.navigationController?.pushViewController(episodeDetailVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     // MARK: - UITableViewDatasource
