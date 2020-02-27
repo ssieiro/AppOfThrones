@@ -35,6 +35,7 @@ class RateViewController: UIViewController {
         confirmButton.layer.cornerRadius = 4.0
     }
     
+    
     // MARK: IBActions
     
     @IBAction func sliderFire(_ sender: UISlider) {
@@ -66,6 +67,7 @@ class RateViewController: UIViewController {
 
 
 // MARK: - Rating
+
 
 func setRating(_ rating: Double) {
     self.setStarImage(star01, rating: rating, minValue: 0)

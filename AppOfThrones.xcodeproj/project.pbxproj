@@ -27,6 +27,8 @@
 		F736D57423FC8F7C003FCAA3 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F736D57323FC8F7C003FCAA3 /* Cast.swift */; };
 		F776E97923FC716D00D22DBB /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F776E97823FC716D00D22DBB /* EpisodeTableViewCell.swift */; };
 		F776E97B23FC71B100D22DBB /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F776E97A23FC71B100D22DBB /* EpisodeTableViewCell.xib */; };
+		F786E12B240824A600475B04 /* FavoritesViewControllar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F786E12A240824A600475B04 /* FavoritesViewControllar.swift */; };
+		F786E12D240824B600475B04 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786E12C240824B600475B04 /* FavoritesViewController.xib */; };
 		F7A962A023FDCC0400F52656 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = F7A9629F23FDCC0400F52656 /* Images */; };
 		F7A962A223FDCFF000F52656 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A123FDCFF000F52656 /* DataController.swift */; };
 		F7A962A423FDD34200F52656 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A962A323FDD34200F52656 /* Houses.swift */; };
@@ -81,6 +83,8 @@
 		F736D57323FC8F7C003FCAA3 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		F776E97823FC716D00D22DBB /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		F776E97A23FC71B100D22DBB /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		F786E12A240824A600475B04 /* FavoritesViewControllar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewControllar.swift; sourceTree = "<group>"; };
+		F786E12C240824B600475B04 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		F7A9629F23FDCC0400F52656 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = AppOfThrones/Images; sourceTree = "<group>"; };
 		F7A962A123FDCFF000F52656 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		F7A962A323FDD34200F52656 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				C383120723F0AB9300ADDB83 /* Cast */,
 				C383120C23F0ABDB00ADDB83 /* House */,
 				C383121123F0AC3300ADDB83 /* Settings */,
+				F786E1292408248000475B04 /* Favorites */,
 				C383120423F0AA7000ADDB83 /* Model */,
 				C38311E223F08A8400ADDB83 /* Assets.xcassets */,
 				C38311E423F08A8400ADDB83 /* LaunchScreen.storyboard */,
@@ -227,6 +232,15 @@
 				C383121423F0AC4900ADDB83 /* SettingsViewController.xib */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F786E1292408248000475B04 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F786E12A240824A600475B04 /* FavoritesViewControllar.swift */,
+				F786E12C240824B600475B04 /* FavoritesViewController.xib */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +340,7 @@
 				C38311E323F08A8400ADDB83 /* Assets.xcassets in Resources */,
 				F736D57223FC8C3B003FCAA3 /* CastTableViewCell.xib in Resources */,
 				F7B26B39240306450058806B /* season_8.json in Resources */,
+				F786E12D240824B600475B04 /* FavoritesViewController.xib in Resources */,
 				F776E97B23FC71B100D22DBB /* EpisodeTableViewCell.xib in Resources */,
 				C383121523F0AC4900ADDB83 /* SettingsViewController.xib in Resources */,
 				F7B26B36240306450058806B /* season_1.json in Resources */,
@@ -354,6 +369,7 @@
 				F7A962A423FDD34200F52656 /* Houses.swift in Sources */,
 				F776E97923FC716D00D22DBB /* EpisodeTableViewCell.swift in Sources */,
 				C38311FD23F0A0CE00ADDB83 /* RateViewController.swift in Sources */,
+				F786E12B240824A600475B04 /* FavoritesViewControllar.swift in Sources */,
 				C383120123F0A75400ADDB83 /* EpisodeViewController.swift in Sources */,
 				F736D57023FC8C2D003FCAA3 /* CastTableViewCell.swift in Sources */,
 				C383120E23F0ABF400ADDB83 /* HousesViewController.swift in Sources */,

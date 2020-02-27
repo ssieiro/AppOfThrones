@@ -23,17 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let castVC = CastViewController.init(nibName: "CastViewController", bundle: nil)
         let houseVC    = HousesViewController.init(nibName: "HousesViewController", bundle: nil)
         let settingsVC = SettingsViewController.init(nibName: "SettingsViewController", bundle: nil)
+        let favoritesVC = FavoritesViewController.init(nibName: "FavoritesViewController", bundle: nil)
 
         episodeVC.tabBarItem  = UITabBarItem.init(title: "Seasons", image: UIImage.init(systemName: "film.fill"), tag: 0)
         castVC.tabBarItem   = UITabBarItem.init(title: "Cast", image: UIImage.init(systemName: "person.3.fill"), tag: 1)
         houseVC.tabBarItem   = UITabBarItem.init(title: "Houses", image: UIImage.init(systemName: "shield.lefthalf.fill"), tag: 2)
         settingsVC.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(systemName: "gear"), tag: 3)
+        favoritesVC.tabBarItem = UITabBarItem.init(title: "Favorites", image: UIImage.init(systemName: "heart.fill"), tag: 4)
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers  = [UINavigationController.init(rootViewController: episodeVC),
                                              UINavigationController.init(rootViewController: castVC),
                                              UINavigationController.init(rootViewController: houseVC),
-                                             UINavigationController.init(rootViewController: settingsVC)]
+                                             UINavigationController.init(rootViewController: settingsVC),
+                                             UINavigationController.init(rootViewController: favoritesVC)
+        ]
         tabBarController.tabBar.barStyle  = .black
         tabBarController.tabBar.isTranslucent  = true
         tabBarController.tabBar.tintColor = UIColor.init(red: 235/255.0, green: 172/255.0, blue: 38/255.0, alpha: 1.0)
