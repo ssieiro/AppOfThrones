@@ -32,9 +32,13 @@ class RateViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupUI()
         confirmButton.layer.cornerRadius = 4.0
     }
     
+    func setupUI() {
+        self.imageView.image = UIImage.init(named: episode?.image ?? "")
+    }
     
     // MARK: IBActions
     
