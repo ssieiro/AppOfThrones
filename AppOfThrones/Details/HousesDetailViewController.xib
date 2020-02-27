@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HousesDetailViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="p4G-fg-E6Q" id="GPH-Cn-mwG"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3Zv-BN-KmP"/>
             </connections>
         </placeholder>
@@ -17,15 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOUSES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="308-eF-84r">
-                    <rect key="frame" x="173" y="411" width="68" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.91552126410000001" green="0.67944025990000001" blue="0.14450383189999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p4G-fg-E6Q">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="p4G-fg-E6Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5Ev-CF-4jl"/>
+                <constraint firstItem="p4G-fg-E6Q" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8cm-iA-9MY"/>
+                <constraint firstItem="p4G-fg-E6Q" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dWD-0B-3zh"/>
+                <constraint firstItem="p4G-fg-E6Q" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="qnR-Lm-uzC"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-23.188405797101453" y="264.50892857142856"/>
         </view>
