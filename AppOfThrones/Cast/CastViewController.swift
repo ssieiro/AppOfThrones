@@ -66,8 +66,8 @@ class CastViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let name = cast[indexPath.row].fullname ?? ""
-        let castDetailVC = CastDetailViewController.init(title: name)
+        let actor = cast[indexPath.row]
+        let castDetailVC = CastDetailViewController.init(withCast: actor)
         self.navigationController?.pushViewController(castDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
         
