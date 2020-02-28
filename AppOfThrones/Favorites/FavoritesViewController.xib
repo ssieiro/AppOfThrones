@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="seasonSegmented" destination="z2F-d8-rPJ" id="5kZ-Jh-eM3"/>
                 <outlet property="tableView" destination="3Io-kI-Erg" id="ETW-ER-quo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Sln-RU-t0g"/>
             </connections>
@@ -19,16 +20,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Io-kI-Erg">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                 </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z2F-d8-rPJ">
+                    <rect key="frame" x="0.0" y="58" width="414" height="32"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="X5B-fK-iuc"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1"/>
+                        <segment title="2"/>
+                        <segment title="3"/>
+                        <segment title="4"/>
+                        <segment title="5"/>
+                        <segment title="6"/>
+                        <segment title="7"/>
+                        <segment title="8"/>
+                    </segments>
+                    <connections>
+                        <action selector="seasonChanged:" destination="-1" eventType="valueChanged" id="beH-av-IhX"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="3Io-kI-Erg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GAC-bZ-HjC"/>
-                <constraint firstItem="3Io-kI-Erg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Snc-oK-DMH"/>
-                <constraint firstItem="3Io-kI-Erg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="g84-oo-XGE"/>
-                <constraint firstItem="3Io-kI-Erg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tvS-CS-dEf"/>
+                <constraint firstItem="3Io-kI-Erg" firstAttribute="top" secondItem="z2F-d8-rPJ" secondAttribute="bottom" constant="23" id="3RU-Uk-I4P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z2F-d8-rPJ" secondAttribute="trailing" id="ER2-a2-Cnd"/>
+                <constraint firstItem="3Io-kI-Erg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="TZ7-zD-Of5"/>
+                <constraint firstItem="3Io-kI-Erg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="TZs-al-dSf"/>
+                <constraint firstItem="3Io-kI-Erg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UBg-NH-cF8"/>
+                <constraint firstItem="z2F-d8-rPJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="Vnx-8y-Vpi"/>
+                <constraint firstItem="z2F-d8-rPJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="v2b-4G-fhe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>

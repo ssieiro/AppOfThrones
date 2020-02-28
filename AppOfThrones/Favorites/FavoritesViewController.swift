@@ -13,29 +13,51 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.setupData(1)
     }
     
-    let episodes: [Episode] = [Episode.init(id: 10002, name: "Hola,Prueba", date: "15 enero prueba", image: "icjOgl5F9DhysOEo6Six2Qfwcu2", episode: 3, season: 2, overview: "Whatever"),Episode.init(id: 10002, name: "Hola,Prueba", date: "15 enero prueba", image: "icjOgl5F9DhysOEo6Six2Qfwcu2", episode: 3, season: 2, overview: "Whatever")]
+    var episodes: [Episode] = []
     
     func setupUI() {
         self.title = "Favorites"
-        let nib = UINib.init(nibName: "FavoritesTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "FavoritesTableViewCell")
+        let nib = UINib.init(nibName: "EpisodeTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
         
         tableView.delegate = self
         tableView.dataSource = self
 
     }
     
+    func setupData (_ seasonNumber: Int) {
+        if let pathURL = Bundle.main.url(forResource: "season_\(seasonNumber)", withExtension: "json"){
+            do {
+            let data = try Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder()
+            episodes = try decoder.decode([Episode].self, from: data)
+            self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("Could not build the path url")
+        }
+    }
+    
+    
 //    MARK: IBOUTLET
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var seasonSegmented: UISegmentedControl!
     
+    @IBAction func seasonChanged(_ sender: UISegmentedControl) {
+        let seasonNumber = sender.selectedSegmentIndex + 1
+        self.setupData(seasonNumber)
+    }
     // MARK: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 123
-    }
+        }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -52,12 +74,13 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as? FavoritesTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
             let ep = episodes[indexPath.row]
-            cell.setEpisodes(ep)
+            cell.setEpisode(ep)
             return cell
         }
         fatalError("Could not create the Episode cell")
     }
 
 }
+
