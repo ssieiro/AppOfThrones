@@ -10,15 +10,15 @@ import UIKit
 
 class HousesDetailViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    var imagen = "imagen"
-    var info = "info"
+    var house: Houses?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
     }
     
-    convenience init(title: String) {
+    convenience init(withHouse house: Houses ){
         self.init(nibName: "HousesDetailViewController", bundle: nil)
+        self.house = house
         self.title = title
     }
     
@@ -44,15 +44,19 @@ class HousesDetailViewController: UIViewController,UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HousesDetailTableViewCellImage", for: indexPath) as? HousesDetailTableViewCellImage {
-                let name = imagen
-                cell.setImage(name)
-                return cell
+                if let house = self.house {
+                    cell.setImage(house)
+                    return cell
+                }
+                fatalError("Error al crear Detail")
             }
         } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HousesDetailTableViewCellInfo", for: indexPath) as? HousesDetailTableViewCellInfo {
-                let name = info
-                cell.setInfo(name)
-                return cell
+                if let house = self.house {
+                    cell.setInfo(house)
+                    return cell
+                }
+                fatalError("Error al crear Detail")
             }
             
         }

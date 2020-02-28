@@ -10,10 +10,13 @@ import UIKit
 
 class HousesDetailTableViewCellInfo: UITableViewCell {
     
-
-    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var houseName: UILabel!
+    @IBOutlet weak var words: UILabel!
+    @IBOutlet weak var seat: UILabel!
     
-    func setInfo (_ info: String) {
-        self.nombre.text = info
+    func setInfo (_ house: Houses) {
+        self.houseName.text = house.name
+        self.words.text = house.words
+        self.seat.text = house.seat
     }
 }

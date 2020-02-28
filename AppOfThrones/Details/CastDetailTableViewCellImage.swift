@@ -11,15 +11,15 @@ import UIKit
 class CastDetailTableViewCellImage: UITableViewCell {
     
 
-    @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var castImage: UIImageView!
     
     override func awakeFromNib() {
-        imagen.layer.cornerRadius = 8
-        imagen.layer.borderColor  = UIColor.white.withAlphaComponent(0.2).cgColor
-        imagen.layer.borderWidth  = 1.0
+        castImage.layer.cornerRadius = 8
+        castImage.layer.borderColor  = UIColor.white.withAlphaComponent(0.2).cgColor
+        castImage.layer.borderWidth  = 1.0
     }
     
     func setImage (_ cast: Cast) {
-       self.imagen.image = UIImage.init(named: cast.avatar ?? "")
+       self.castImage.image = UIImage.init(named: cast.avatar ?? "")
     }
 }

@@ -32,7 +32,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imagen" destination="ig1-DE-KSZ" id="jxZ-Z2-Id1"/>
+                <outlet property="castImage" destination="ig1-DE-KSZ" id="ONN-Pg-oxd"/>
             </connections>
             <point key="canvasLocation" x="-213.04347826086959" y="-51.897321428571423"/>
         </tableViewCell>

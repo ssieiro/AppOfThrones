@@ -10,8 +10,6 @@ import UIKit
 
 class CastDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var imagen = "imagen"
-    var info = "info"
     var cast: Cast?
     override func viewDidLoad() {
         super.viewDidLoad()

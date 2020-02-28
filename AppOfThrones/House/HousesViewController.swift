@@ -70,8 +70,8 @@ class HousesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let name = houses[indexPath.row].name ?? ""
-            let housesDetailVC = HousesDetailViewController.init(title: name)
+            let house = houses[indexPath.row]
+            let housesDetailVC = HousesDetailViewController.init(withHouse: house)
             self.navigationController?.pushViewController(housesDetailVC, animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
             
