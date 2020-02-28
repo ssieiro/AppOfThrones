@@ -14,6 +14,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         self.setupUI()
         self.setupData(1)
+        self.setupNotifications ()
     }
     
     var episodes: [Episode] = []
@@ -34,6 +35,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             let data = try Data.init(contentsOf: pathURL)
             let decoder = JSONDecoder()
             episodes = try decoder.decode([Episode].self, from: data)
+            self.updateFavorites()
             self.tableView.reloadData()
             } catch {
                 fatalError(error.localizedDescription)
@@ -42,6 +44,25 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             fatalError("Could not build the path url")
         }
     }
+    
+    func setupNotifications () {
+           let noteName = Notification.Name(rawValue: "DidFavoriteChanged")
+           NotificationCenter.default.addObserver(self, selector: #selector(self.updateFavorites), name: noteName, object: nil)
+           
+       }
+    @objc func updateFavorites() {
+        for ep in episodes {
+                if DataController.shared.isFavorite(ep) == false {
+                    if let index = self.episodes.firstIndex(where: { (episodes) -> Bool in
+                        return ep.id == episodes.id // te devuelve el primer número que cumpla la condicion, recorre rating buscando un id que sea igual al que le hemos enviado de episodio
+                    }) {
+                        self.episodes.remove(at: index) // si lo encuentra, lo borra
+                    }
+            self.tableView.reloadData()
+        }
+        }
+    }
+
     
     
 //    MARK: IBOUTLET
