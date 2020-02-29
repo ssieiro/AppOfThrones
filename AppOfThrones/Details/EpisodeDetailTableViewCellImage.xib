@@ -8,30 +8,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeDetailTableViewCellImage" rowHeight="136" id="F8M-sK-xav" customClass="EpisodeDetailTableViewCellImage" customModule="AppOfThrones" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="466" height="136"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeDetailTableViewCellImage" rowHeight="77" id="F8M-sK-xav" customClass="EpisodeDetailTableViewCellImage" customModule="AppOfThrones" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="191"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F8M-sK-xav" id="tj2-iA-ikq">
-                <rect key="frame" x="0.0" y="0.0" width="466" height="136"/>
+                <rect key="frame" x="0.0" y="0.0" width="348" height="191"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMAGEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-t5-lAL">
-                        <rect key="frame" x="201" y="57.5" width="64" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-ep-Jlt">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="191"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="348" id="Ib0-bQ-s8K"/>
+                            <constraint firstAttribute="height" constant="191" id="Kwv-Z6-c07"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ysd-t5-lAL" firstAttribute="centerY" secondItem="tj2-iA-ikq" secondAttribute="centerY" id="I3Y-eh-2Fi"/>
-                    <constraint firstItem="ysd-t5-lAL" firstAttribute="centerX" secondItem="tj2-iA-ikq" secondAttribute="centerX" id="xCG-bU-l73"/>
+                    <constraint firstItem="x4S-ep-Jlt" firstAttribute="top" secondItem="tj2-iA-ikq" secondAttribute="top" id="DzT-2T-jId"/>
+                    <constraint firstAttribute="bottom" secondItem="x4S-ep-Jlt" secondAttribute="bottom" id="TGb-wK-uvE"/>
+                    <constraint firstItem="x4S-ep-Jlt" firstAttribute="leading" secondItem="tj2-iA-ikq" secondAttribute="leading" id="d9W-nc-3ox"/>
+                    <constraint firstAttribute="trailing" secondItem="x4S-ep-Jlt" secondAttribute="trailing" id="jrg-Oq-Ew9"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <connections>
-                <outlet property="nombre" destination="ysd-t5-lAL" id="5WE-MI-OPD"/>
+                <outlet property="episodeImage" destination="x4S-ep-Jlt" id="W9L-pb-JIH"/>
             </connections>
-            <point key="canvasLocation" x="-36.231884057971016" y="-145.3125"/>
+            <point key="canvasLocation" x="-36.231884057971016" y="-165.06696428571428"/>
         </tableViewCell>
     </objects>
 </document>

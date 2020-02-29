@@ -81,8 +81,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let name = episodes[indexPath.row].name ?? ""
-        let episodeDetailVC = EpisodeDetailViewController.init(title: name)
+        let episode = episodes[indexPath.row]
+        let episodeDetailVC = EpisodeDetailViewController.init(withEpisode: episode)
         self.navigationController?.pushViewController(episodeDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }

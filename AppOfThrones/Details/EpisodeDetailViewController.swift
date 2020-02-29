@@ -10,15 +10,15 @@ import UIKit
 
 class EpisodeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var imagen = "imagen"
-    var info = "info"
+    var episode: Episode?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
     }
     
-    convenience init(title: String) {
+    convenience init(withEpisode episode: Episode) {
         self.init(nibName: "EpisodeDetailViewController", bundle: nil)
+        self.episode = episode
         self.title = title
     }
     
@@ -42,15 +42,19 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.row == 0 {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeDetailTableViewCellImage", for: indexPath) as? EpisodeDetailTableViewCellImage {
-            let name = imagen
-            cell.setImage(name)
-            return cell
+            if let episode = self.episode {
+                cell.setImage(episode)
+                return cell
+            }
+            fatalError("Error al crear Detail")
         }
     } else {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeDetailTableViewCellInfo", for: indexPath) as? EpisodeDetailTableViewCellInfo {
-            let name = info
-            cell.setInfo(name)
-            return cell
+            if let episode = self.episode {
+                cell.setInfo(episode)
+                return cell
+            }
+            fatalError("Error al crear Detail")
         }
         
     }
